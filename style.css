@@ -3,41 +3,25 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    height: 100%;
-    width: 100%;
-}
-.cards{
-    height: 740px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    
+html,body{
+    font-family: Arial, Helvetica, sans-serif;
 }
 .card-container{
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 10px;
-    margin-top: 30px;
-    width: fit-content;
-    height: 700px;
-    transition: transform 0.2s;
+    grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));  
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.card-1{
-    max-height: fit-content;
-    max-width: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: -2px 2px 2px -2px rgb(0, 0.2,0.5);
-    background-color: aliceblue;
-    
+.card{
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
 }
-.card-1 img{
-    height: 250px;
-    width: 297px;
-    align-items: center;
-    border-radius: 10px;
-}
-.card-1 h2,p{
-    padding: 15px 10px
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1rem;
 }
